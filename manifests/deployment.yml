@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: cgovanipipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cgovanipipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: cgovanipipelinesjavascriptdocker 
+          image: regik8tst.azurecr.io/cgovanipipelinesjavascriptdocker 
+          ports:
+          - containerPort: 8080
